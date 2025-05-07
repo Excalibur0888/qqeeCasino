@@ -48,6 +48,61 @@ img {
     height: auto;
 }
 
+/* Типографика */
+h1 {
+		font-size: 36px;
+		line-height: 1.2;
+		margin-bottom: 15px;
+		letter-spacing: 0.5px;
+}
+
+h2 {
+		font-size: 28px;
+		line-height: 1.3;
+		letter-spacing: 0.3px;
+}
+
+h3 {
+		font-size: 22px;
+		line-height: 1.4;
+		letter-spacing: 0.2px;
+}
+
+p {
+		font-weight: 400;
+		letter-spacing: 0.2px;
+}
+
+.play-btn {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+}
+
+.category-item .label {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+}
+
+.game-card h3 {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+}
+
+.game-description {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+}
+
+.currency-rates, .winners-ticker, .ticker-link {
+		font-family: 'Poppins', sans-serif;
+}
+
+.footer-column h3 {
+		font-family: 'Montserrat', sans-serif;
+		letter-spacing: 0.5px;
+	}
+
+
 .btn {
     display: flex;
 		justify-content: center;
@@ -936,12 +991,20 @@ footer {
 
 .footer-bottom {
     display: flex;
+		padding: 0 110px;
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-wrap: wrap;
     gap: 20px;
+}
+
+@media (max-width: 992px) {
+	.footer-bottom {
+		padding: 0;
+		padding-top: 30px;
+	}
 }
 
 .payment-methods {
@@ -1024,216 +1087,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .games-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-}
 
-@media (max-width: 992px) {
-    .page-container {
-        flex-direction: column;
-    }
-    
-    .sidebar {
-        position: relative;
-        top: 0;
-        width: 100%;
-        min-width: auto;
-    }
-    
-    .games-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-wrap: wrap;
-    }
-    
-    .main-nav {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-    }
-    
-    .featured-games h2 {
-        font-size: 32px;
-    }
-    
-    .aviator-promo h2 {
-        font-size: 28px;
-    }
-    
-    .games-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .testimonials-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .start-steps li,
-    .promotions-list li {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .ticker-wrapper {
-        flex-direction: column;
-        align-items: center;
-        padding: 5px 10px;
-        gap: 5px;
-    }
-    
-    .currency-rates {
-        width: 100%;
-        justify-content: center;
-        padding: 6px 10px;
-        gap: 10px;
-    }
-    
-    .currency {
-        font-size: 12px;
-    }
-    
-    .ticker-quick-links {
-        width: 100%;
-        justify-content: center;
-        gap: 5px;
-    }
-    
-    .ticker-link {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-    
-    .winners-ticker {
-        width: 100%;
-        padding: 6px 10px;
-        height: 32px;
-    }
-    
-    .winner {
-        font-size: 12px;
-    }
-    
-    .header-container {
-        padding: 10px;
-        position: relative;
-    }
-    
-    .logo img {
-        max-height: 40px;
-    }
-    
-    .header-buttons {
-        gap: 5px;
-    }
-    
-    .btn {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-        margin-left: 10px;
-    }
-    
-    .main-nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--secondary-bg);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        z-index: 100;
-        padding: 10px 0;
-    }
-    
-    .main-nav.active {
-        display: block;
-    }
-    
-    .main-nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .main-nav li {
-        width: 100%;
-    }
-    
-    .main-nav a {
-        display: block;
-        padding: 12px 20px;
-    }
-    
-    .main-nav li.active a::after,
-    .main-nav a:hover::after {
-        display: none;
-    }
-    
-    .main-nav li.active {
-        background-color: rgba(212, 175, 55, 0.1);
-    }
-    
-    .slider-item {
-        height: 250px;
-    }
-    
-    .featured-games, 
-    .aviator-promo,
-    .poker-promo {
-        padding: 20px 15px;
-    }
-    
-    .featured-games h2,
-    .aviator-promo h2,
-    .poker-promo h2 {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-    
-    .game-count {
-        font-size: 14px;
-        padding: 4px 10px;
-    }
-    
-    .participate-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-}
 
 /* Games page specific styles */
 .page-header {
@@ -2966,58 +2820,217 @@ footer {
     }
 }
 
-/* Типографика */
-h1 {
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+	.games-grid {
+			grid-template-columns: repeat(4, 1fr);
+	}
+	
+	.features-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+	}
 }
 
-h2 {
-    font-size: 28px;
-    line-height: 1.3;
-    letter-spacing: 0.3px;
+@media (max-width: 992px) {
+	.page-container {
+			flex-direction: column;
+	}
+	
+	.sidebar {
+			position: relative;
+			top: 0;
+			width: 100%;
+			min-width: auto;
+	}
+	
+	.games-grid {
+			grid-template-columns: repeat(3, 1fr);
+	}
+	
+	.footer-links {
+			grid-template-columns: repeat(2, 1fr);
+	}
 }
 
-h3 {
-    font-size: 22px;
-    line-height: 1.4;
-    letter-spacing: 0.2px;
+@media (max-width: 768px) {
+	.header-container {
+			flex-wrap: wrap;
+	}
+	
+	.main-nav {
+			display: none;
+	}
+	
+	.mobile-menu-btn {
+			display: flex;
+	}
+	
+	.featured-games h2 {
+			font-size: 32px;
+	}
+	
+	.aviator-promo h2 {
+			font-size: 28px;
+	}
+	
+	.games-grid {
+			grid-template-columns: 1fr;
+	}
+	
+	.features-grid {
+			grid-template-columns: 1fr;
+	}
+	
+	.testimonials-container {
+			grid-template-columns: 1fr;
+	}
+	
+	.footer-links {
+			grid-template-columns: 1fr;
+	}
+	
+	.footer-bottom {
+			flex-direction: column;
+			text-align: center;
+	}
+	
+	.start-steps li,
+	.promotions-list li {
+			font-size: 14px;
+	}
 }
 
-p {
-    font-weight: 400;
-    letter-spacing: 0.2px;
-}
-
-.play-btn {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.category-item .label {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-}
-
-.game-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.game-description {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-
-.currency-rates, .winners-ticker, .ticker-link {
-    font-family: 'Poppins', sans-serif;
-}
-
-.footer-column h3 {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
+@media (max-width: 576px) {
+	.ticker-wrapper {
+			flex-direction: column;
+			align-items: center;
+			padding: 5px 10px;
+			gap: 5px;
+	}
+	
+	.currency-rates {
+			width: 100%;
+			justify-content: center;
+			padding: 6px 10px;
+			gap: 10px;
+	}
+	
+	.currency {
+			font-size: 12px;
+	}
+	
+	.ticker-quick-links {
+			width: 100%;
+			justify-content: center;
+			gap: 5px;
+	}
+	
+	.ticker-link {
+			font-size: 12px;
+			padding: 6px 10px;
+	}
+	
+	.winners-ticker {
+			width: 100%;
+			padding: 6px 10px;
+			height: 32px;
+	}
+	
+	.winner {
+			font-size: 12px;
+	}
+	
+	.header-container {
+			padding: 10px;
+			position: relative;
+	}
+	
+	.logo img {
+			max-height: 40px;
+	}
+	
+	.header-buttons {
+			gap: 5px;
+	}
+	
+	.btn {
+			padding: 8px 12px;
+			font-size: 14px;
+	}
+	
+	.mobile-menu-btn {
+			display: flex;
+			margin-left: 10px;
+	}
+	
+	.main-nav {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background-color: var(--secondary-bg);
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+			z-index: 100;
+			padding: 10px 0;
+	}
+	
+	.main-nav.active {
+			display: block;
+	}
+	
+	.main-nav ul {
+			flex-direction: column;
+			gap: 0;
+	}
+	
+	.main-nav li {
+			width: 100%;
+	}
+	
+	.main-nav a {
+			display: block;
+			padding: 12px 20px;
+	}
+	
+	.main-nav li.active a::after,
+	.main-nav a:hover::after {
+			display: none;
+	}
+	
+	.main-nav li.active {
+			background-color: rgba(212, 175, 55, 0.1);
+	}
+	
+	.slider-item {
+			height: 250px;
+	}
+	
+	.featured-games, 
+	.aviator-promo,
+	.poker-promo {
+			padding: 20px 15px;
+	}
+	
+	.featured-games h2,
+	.aviator-promo h2,
+	.poker-promo h2 {
+			font-size: 20px;
+			margin-bottom: 8px;
+	}
+	
+	.game-count {
+			font-size: 14px;
+			padding: 4px 10px;
+	}
+	
+	.participate-btn {
+			padding: 10px 20px;
+			font-size: 14px;
+	}
 }
 
 @media (max-width: 768px) {
